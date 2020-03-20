@@ -1,4 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# FSM-FRONTEND
+
+이 프로젝트는 [Create React App](https://github.com/facebook/create-react-app)로 생성되었습니다.   
+TypeScript, React, React-Router, React-Redux, SCSS, Material UI를 사용하였습니다.
+
+## File Structure
+FSM-FRONTEND의 파일 설계입니다.
+
+```
+fsm-frontend
+.
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+└── src
+    ├── assets
+    │   ├── css
+    │   │   ├── fsm-frontend.css
+    │   │   ├── fsm-frontend.css.map
+    │   │   └── fsm-frontend.min.css
+    │   ├── jss
+    │   │   └── CSS in JS 사용되지 않을 수도 있음.
+    │   ├── img
+    │   └── scss
+    │       ├── core
+    │       ├── plugins
+    │       └── fsm-frontend.scss
+    ├── components
+    │   ├── Header
+    │   │   └── Header.tsx
+    │   ├── Footer
+    │   │   └── Footer.tsx
+    │   └── ...
+    ├── store
+    ├── routes.tsx
+    ├── index.tsx
+    ├── logo.svg
+    └── views
+        ├── LoginPage.tsx
+        ├── DashboardPage.tsx
+        └── ...
+
+```
 
 ## Available Scripts
 

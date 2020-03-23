@@ -4,11 +4,10 @@
 TypeScript, React, React-Router, React-Redux, SCSS, Material UI를 사용하였습니다.
 
 ## File Structure
-FSM-FRONTEND의 파일 설계입니다.
 
 ```
-fsm-frontend
-.
+fsm
+│
 ├── public
 │   ├── favicon.ico
 │   ├── index.html
@@ -16,16 +15,16 @@ fsm-frontend
 └── src
     ├── assets
     │   ├── css
-    │   │   ├── fsm-frontend.css
-    │   │   ├── fsm-frontend.css.map
-    │   │   └── fsm-frontend.min.css
+    │   │   ├── fsm.css
+    │   │   ├── fsm.css.map
+    │   │   └── fsm.min.css
     │   ├── jss
-    │   │   └── CSS in JS 사용되지 않을 수도 있음.
+    │   │   └── CSS in JS // 사용하지 않을 수도 있음.
     │   ├── img
     │   └── scss
     │       ├── core
     │       ├── plugins
-    │       └── fsm-frontend.scss
+    │       └── fsm.scss
     ├── components
     │   ├── Header
     │   │   └── Header.tsx

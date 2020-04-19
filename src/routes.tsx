@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
 
-import App from "./views/App";
-import Dashboard from "./views/Dashboard";
-import Login from "./views/Login";
-import Mypage from "./views/Mypage";
-import PrivateRoute from "./components/PrivateRoute";
+import App from "views/App";
+import Dashboard from "views/Dashboard";
+import Login from "views/Login";
+import Mypage from "views/Mypage";
+import PrivateRoute from "components/PrivateRoute/PrivateRoute";
 
 
 function routes() {

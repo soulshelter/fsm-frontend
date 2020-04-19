@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import * as serviceWorker from './serviceWorker';
-import Routes from "./routes"
+import * as serviceWorker from 'serviceWorker';
+import Routes from "routes"
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import rootReducer from './modules';
+import rootReducer from 'modules';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import logger from 'redux-logger';
 

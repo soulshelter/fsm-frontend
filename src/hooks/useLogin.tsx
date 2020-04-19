@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { login, logout, loginSuccess, loginFailure } from '../modules/login';
+import { login, logout, loginSuccess, loginFailure } from 'modules/login';
 import { useCallback } from 'react';
-import { getAuthentication } from '../api/reqres'
-import { RootState } from '../modules';
+import { getAuthentication } from 'api/reqres'
+import { RootState } from 'modules';
 
 
 export default function useLogin() {

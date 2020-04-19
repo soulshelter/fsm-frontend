@@ -7,12 +7,18 @@ import { createStore, applyMiddleware } from 'redux';
 import rootReducer from 'modules';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import logger from 'redux-logger';
+import { basicTheme } from 'assets/jss/basicTheme';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from 'assets/jss/global-styles';
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(logger)));
 
 ReactDOM.render(
     <Provider store={store}>
-        <Routes />
+        <GlobalStyle />
+        <ThemeProvider theme={basicTheme}>
+            <Routes />
+        </ThemeProvider>
     </Provider>,
     document.getElementById("root")
 );

@@ -42,6 +42,22 @@ fsm
 
 ```
 
+## JSON-SERVER
+```
+$ npx json-server ./data.json --port 4000
+```
+
+## Get-Start
+yarn add classnames node-sass 설정
+tsconfig.json 에 baeUrl 추가
+```
+    "baseUrl": "src",
+```
+index.html에 fontawesome 추가
+```
+  <link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet" />
+```
+
 ## Available Scripts
 
 In the project directory, you can run:

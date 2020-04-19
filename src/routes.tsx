@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom";
 
-import App from "./views/App";
-import Dashboard from "./views/Dashboard";
-import Login from "./views/Login";
-import Mypage from "./views/Mypage";
-import PrivateRoute from "./components/PrivateRoute";
-
+import App from "views/App";
+import Dashboard from "views/Dashboard";
+import Login from "views/Login";
+import Mypage from "views/Mypage";
+import PrivateRoute from "components/PrivateRoute/PrivateRoute";
+import styled from 'styled-components';
 
 function routes() {
     return (
@@ -18,12 +18,14 @@ function routes() {
             <Link> : 링크 생성
         */
         <Router>
-            <nav>
-                <Link to="/app">App</Link> |
-                <Link to="/dashboard">dashboard</Link> |
-                <Link to="/login">login</Link> |
-                <Link to="/mypage">mypage</Link>
-            </nav>
+            <Container>
+                <nav>
+                    <Link to="/app">App</Link> |
+                    <Link to="/dashboard">dashboard</Link> |
+                    <Link to="/login">login</Link> |
+                    <Link to="/mypage">mypage</Link>
+                </nav>
+            </Container>
             <Switch>
                 <Route path="/app" component={App} />
                 <Route path="/dashboard" component={Dashboard} />
@@ -34,5 +36,9 @@ function routes() {
         </Router>
     )
 };
+
+const Container = styled.div`
+    background: ${props => props.theme.color.main};
+`
 
 export default routes;

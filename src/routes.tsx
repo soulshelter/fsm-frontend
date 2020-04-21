@@ -5,6 +5,8 @@ import App from "views/App";
 import Dashboard from "views/Dashboard";
 import Login from "views/Login";
 import Mypage from "views/Mypage";
+import LoginPage from "views/LoginPage/LoginPage"
+import HeaderPage from "views/HeaderPage/HeaderPage"
 import PrivateRoute from "components/PrivateRoute/PrivateRoute";
 import styled from 'styled-components';
 
@@ -23,7 +25,9 @@ function routes() {
                     <Link to="/app">App</Link> |
                     <Link to="/dashboard">dashboard</Link> |
                     <Link to="/login">login</Link> |
-                    <Link to="/mypage">mypage</Link>
+                    <Link to="/mypage">mypage</Link> |
+                    <Link to="/loginpage">loginpage</Link> |
+                    <Link to="/headerpage">headerpage</Link>
                 </nav>
             </Container>
             <Switch>
@@ -31,6 +35,8 @@ function routes() {
                 <Route path="/dashboard" component={Dashboard} />
                 <Route path="/login" component={Login} />
                 <PrivateRoute path="/mypage" component={Mypage} />
+                <Route path="/loginpage" component={LoginPage} />
+                <Route path="/headerpage" component={HeaderPage} />
                 <Redirect from="*" to="/app" />
             </Switch>
         </Router>

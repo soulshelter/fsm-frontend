@@ -16,22 +16,11 @@ import Drawer from "@material-ui/core/Drawer";
 import Menu from "@material-ui/icons/Menu";
 import Close from "@material-ui/icons/Close";
 // core components
-import styles from "assets/jss/fsm-frontend/components/headerStyle";
+import styles from "assets/jss/fsm-frontend/components/headerStyle.js";
 
-interface Props {
-  color: "primary" | "info" | "success" | "warning" | "danger" | "transparent" | "white" | "rose" | "dark";
-  links?: React.ReactNode;
-  brand?: string;
-  fixed?: boolean;
-  absolute?: boolean;
-  changeColorOnScroll?: {
-    color: "primary" | "info" | "success" | "warning" | "danger" | "transparent" | "white" | "rose" | "dark";
-    height: number;
-  }
-}
 const useStyles = makeStyles(styles);
 
-export default function Header(props: Props) {
+export default function Header(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const classes = useStyles();
   React.useEffect(() => {
@@ -51,22 +40,20 @@ export default function Header(props: Props) {
     const { color, changeColorOnScroll } = props;
 
     const windowsScrollTop = window.pageYOffset;
-    if (changeColorOnScroll) {
-      if (windowsScrollTop > changeColorOnScroll.height) {
-        document.body
-          .getElementsByTagName("header")[0]
-          .classList.remove(classes[color]);
-        document.body
-          .getElementsByTagName("header")[0]
-          .classList.add(classes[changeColorOnScroll.color]);
-      } else {
-        document.body
-          .getElementsByTagName("header")[0]
-          .classList.add(classes[color]);
-        document.body
-          .getElementsByTagName("header")[0]
-          .classList.remove(classes[changeColorOnScroll.color]);
-      }
+    if (windowsScrollTop > changeColorOnScroll.height) {
+      document.body
+        .getElementsByTagName("header")[0]
+        .classList.remove(classes[color]);
+      document.body
+        .getElementsByTagName("header")[0]
+        .classList.add(classes[changeColorOnScroll.color]);
+    } else {
+      document.body
+        .getElementsByTagName("header")[0]
+        .classList.add(classes[color]);
+      document.body
+        .getElementsByTagName("header")[0]
+        .classList.remove(classes[changeColorOnScroll.color]);
     }
   };
   const { color, links, brand, fixed, absolute } = props;
@@ -82,7 +69,7 @@ export default function Header(props: Props) {
         <Button className={classes.title}>
           <Link to="/">{brand}</Link>
         </Button>
-        <Hidden smDown implementation="css">
+        <Hidden smDown implementation="css" className={classes.hidden}>
           <div className={classes.collapse}>{links}</div>
         </Hidden>
         <Hidden mdUp>

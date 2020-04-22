@@ -15,7 +15,7 @@ import Header from "components/Header/Header";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 
 
-import loginPageStyle from "assets/jss/material-kit-pro-react/views/loginPageStyle";
+import loginPageStyle from "assets/jss/fsm-frontend/views/loginPageStyle";
 
 import image from "assets/img/bg7.jpg";
 
